@@ -1,0 +1,301 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Ccommon Style or Utilities */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3f1ff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 870px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+.section-heading {
+    font-size: 24px;
+    line-height: 36px;
+    color: #562EFF;
+    margin-top: 3px;
+}
+
+hr {
+    border: 1px solid #D1D1D1;
+    margin: 30px 0px;
+}
+
+/* NavBar */
+nav {
+    background-color: #562EFF;
+    display: flex;
+    justify-content: center;    
+
+    
+}
+.navBar {
+    width: 930px;
+    height: 94px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-band img {
+    width: 40px;
+    height: 51px;
+}
+
+.menu-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-band p {
+    font-size: 24px;
+    line-height: 36px;
+    display: inline;
+    padding-left: 16px;
+
+}
+.menu a{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    padding-left: 36px;
+    
+}
+.profile img {
+    width: 51px;
+    height: 51px;
+    padding-left: 36px;
+    
+}
+
+
+/* Top player  */
+
+
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+
+}
+
+.player img {
+    width: 56px;
+    height: 56px;
+
+}
+
+.player-name {
+    font-size: 18px;
+    line-height: 27px;
+    margin-left: 16px;
+    text-transform: capitalize;
+}
+
+/* Top Blog */
+
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 26px;
+    column-gap: 80px;
+}
+
+.blog {
+    display: flex;
+}
+
+.thumbnail img {
+    width: 177px;
+    height: 117px;
+}
+
+.blog-info {
+    margin-left: 16px;
+}
+
+.blog-title {
+    font-size: 20px;
+    line-height: 34px;
+}
+
+.blog-author {
+    color: #9F9F9F;
+}
+
+.blog-author a {
+    text-decoration: none;
+    color: #562EFF;
+    font-weight: 400;
+}
+
+/* Latest Course  */
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+}
+
+.course {
+    width: 253px;
+    height: 270px;
+    filter: drop-shadow (0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05));
+    padding: 15px 17px;
+    box-shadow: 0px 5.342289924621582px 13.35572338104248px 0px #0000000D;
+
+}
+
+.course-thumbnail img {
+    width: 224px;
+    height: 104px;
+}
+
+.course-title {
+    color: #1E1E1E;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.course-info a {
+    color: #ED6B4F;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.course-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.fil {
+    color: #FFC014;
+}
+
+.fa-star.empty {
+    color: #AEAEAE;
+    opacity: 0.25;
+}
+
+.rating {
+    color: #A2A2A2;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.time {
+    color: #FF4A60;
+    font-size: 15px;
+    font-weight: 28px;
+    background: #FFE4E8;
+    padding: 5px 6px;
+    border-radius: 15px;
+}
+
+/* ----------------
+    Responsive
+----------------- */
+
+/* Small Devies  */
+
+@media all and (max-width:688px) {
+    /* font size */
+    .blog-title, .course-title  {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .container {
+        width: 100%
+    }
+
+    .section-heading {
+        text-align: center;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: 1fr;
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .course {
+        margin: 0px auto;
+    }
+    .blog {
+        width:253px ;
+        margin: 0px auto;
+    }
+
+}
+
+/* tablet  */
+@media all and (min-width:689px) and (max-width:992px) {
+    .container {
+        width: 100%
+    }
+    .section-heading {
+        text-align: center;
+    }
+
+
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .courses {
+        margin: 0px 30px;
+    }
+    .course{
+        padding: 15px 0px;
+    }
+    .player {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .blogs {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0px 30px;
+    }
+}
